@@ -11,10 +11,6 @@ clf = tree.DecisionTreeClassifier()
 clf = clf.fit(features, labels)
 
 predicao = clf.predict([[450, 2]])
-print(predicao, end=' = ')
 
-match predicao:
-    case 0:
-        print("Carro esporte")
-    case 1:
-        print("Minivan")
+resultado = ['Carro esporte', 'Minivan'][int(predicao)]
+print(f'{resultado}')
